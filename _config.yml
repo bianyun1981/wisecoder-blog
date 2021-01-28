@@ -93,7 +93,7 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include:
+include: CNAME
 exclude:
 ignore:
 
@@ -108,3 +108,4 @@ deploy:
   type: 'git'
   repo: git@github.com:bianyun1981/bianyun1981.github.io.git
   branch: main
+
