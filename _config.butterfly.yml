@@ -36,8 +36,9 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-#  fab fa-github:
-#  fas fa-envelope:
+  fab fa-github: https://github.com/bianyun1981
+  fas fa-envelope: mailto:wisecoder@126.com || Email
+  fas fa-rss: /atom.xml || RSS
 
 # search (搜索)
 # --------------------------------------
@@ -388,7 +389,7 @@ crisp:
 footer:
   owner:
     enable: true
-    since: 2020
+    since: 2021
   custom_text:
   copyright: true # Copyright of theme and framework
 
@@ -592,7 +593,7 @@ blog_title_font:
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
-  enable: true
+  enable: false
   icon: # the unicode value of Font Awesome icon, such as '\3423'
   icon-top:
 
@@ -616,22 +617,28 @@ subtitle:
   # 開頭不允許轉義字元，如需要，請把整個句子用雙引號包住
   # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
   sub:
-    - 月圆之夜&#44; 紫禁之巅&#44; 一剑西来&#44; 天外飞仙
-    - 生亦何欢&#44; 死亦何苦
-    - 喜欢一个人需要理由吗？
-    - 留下点回忆行不行？
-    - 做人如果没有梦想&#44; 那跟咸鱼有什么分别？
-    - 呐，做人呢，最重要就是开心
-    - 不开心&#44; 就算长生不老也没有用
-    - 别以为你长得帅我就不打你
+    - 月圆之夜，紫禁之巅，一剑西来，天外飞仙！
+    - 飞是小李飞刀的飞，刀是小李飞刀的刀。
+    - 别人笑我太疯颠，我笑他人看不穿。
+    - 做人如果没有梦想，那跟咸鱼有什么分别？
+    - 只要用心，人人都是食神。
+    - 别以为你长得帅我就不打你。
     - 难道我学过如来神掌也要说给你听吗？
-    - 其实我真的是一个演员
-    - 大哥&#44; 你只是个强盗&#44; 别学人家做学问了！
-    - 只要用心&#44; 人人都是食神
-    - 你看那个人好怪&#44; 好像一条狗耶！
+    - 桃花过处，寸草不生。金钱落地，人头不保。
+    - 文也不行，武也不行！你不做山贼，你想做状元哪？
+    - 人家郎才女貌，天生一对，轮得到你这妖怪来反对？
+    - 你只是强盗啊，大哥，别学人家做学问！
+    - 有一天当你发觉你爱上一个你讨厌的人，这段感情才是最要命的。
+    - 爱一个人需要理由吗？不需要吗？
+    - 生亦何哀，死亦何苦。
+    - 我从来都不知道，原来爱一个人是这么痛苦。
+    - 留下点回忆行不行？我不要回忆，要的话，留下你的人。
+    - 那个人样子好怪啊！我也看到了，他好像条狗啊!
+    - 呐，做人呢，最重要就是开心。
+    - 不开心，就算长生不老也没有用。
 
 
-# Loading Animation (加載動畫)
+    # Loading Animation (加載動畫)
 preloader: false
 
 # aside (側邊欄)
@@ -645,7 +652,7 @@ aside:
   position: right # left or right
   card_author:
     enable: true
-    description:
+    description: 其实我是一个演员
     button:
       enable: false
       icon: fab fa-github
@@ -827,7 +834,7 @@ instantpage: true
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之間添加空格)
 pangu:
-  enable: true
+  enable: false
   field: site # site/post
 
 # Lazyload (圖片懶加載)

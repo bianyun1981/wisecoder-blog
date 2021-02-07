@@ -83,7 +83,7 @@ $ sudo yum remove docker \
 {% endnote %}
 
 {% note info flat %}
-如果之前安装过旧版本的 Docker，那么上述卸载命令不会删除路径 `/var/lib/docker/`下的内容，此路径下所包含的 Docker 数据（镜像、容器、卷、网络）可以在新版 Docker下继续使用。最新版 Docker 的安装包名为 `docker-ce`.
+**注意：**上述卸载命令并不会删除路径 `/var/lib/docker/`下的内容，此路径下所包含的 Docker 数据（镜像、容器、卷、网络）可以在新版 Docker下继续使用。最新版 Docker 的安装包名为 `docker-ce`.
 
 {% endnote %}
 
@@ -125,8 +125,8 @@ $ sudo yum install -y \
 
 ```bash
 $ curl -fsSL \
-    https://mirrors.aliyun.com/docker-ce/linux/debian/gpg | \
-    sudo apt-key add -
+  https://mirrors.aliyun.com/docker-ce/linux/debian/gpg \
+  | sudo apt-key add -
 ```
 
 <!-- endtab -->
@@ -167,14 +167,17 @@ $ sudo yum-config-manager \
 
 {% endtabs %}
 
-## 更新并安装 `docker-ce`
+## 更新并安装 Docker
 
 {% tabs install-essential-utils %}
 <!-- tab Debian 10 -->
 
 ```bash
 $ sudo apt update
-$ sudo apt install -y docker-ce docker-ce-cli containerd.io
+$ sudo apt install -y \
+    docker-ce \
+    docker-ce-cli \
+    containerd.io
 ```
 
 <!-- endtab -->
@@ -183,7 +186,10 @@ $ sudo apt install -y docker-ce docker-ce-cli containerd.io
 
 ```bash
 $ sudo yum makecache fast
-$ sudo yum install -y docker-ce docker-ce-cli containerd.io
+$ sudo yum install -y \
+    docker-ce \
+    docker-ce-cli \
+    containerd.io
 ```
 
 <!-- endtab -->
@@ -212,7 +218,7 @@ $ sudo docker run --rm hello-world
 
 {% endtabs %}
 
-如果命令运行后没有报错，且在控制台打印出 hello world 相关的信息，则表明 docker 已被正确安装。
+如果命令运行后没有报错，且在控制台打印出 hello world 相关的信息，则表明 Docker 已被正确安装。
 
 ## 设置普通用户直接运行 docker
 
@@ -244,10 +250,10 @@ $ sudo systemctl enable containerd.service
 ```bash
 $ sudo mkdir -p /etc/docker
 $ sudo tee /etc/docker/daemon.json <<-'EOF'
-  {
-    "registry-mirrors": ["https://**xxxxxxxx**.mirror.aliyuncs.com"]
-  }
-  EOF
+{
+"registry-mirrors": ["https://**xxxxxxxx**.mirror.aliyuncs.com"]
+}
+EOF
 $ sudo systemctl daemon-reload
 $ sudo systemctl restart docker
 ```

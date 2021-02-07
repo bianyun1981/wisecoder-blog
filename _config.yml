@@ -6,16 +6,16 @@
 title: WiseCoder
 slogan: 清风明月，人生几何
 subtitle:
-description: '其实我是一个演员'
-keywords:
+description: 一个后进程序员的觉醒，希望用这个博客记录自己不断进取和提高的点滴，激励自己不能停止学习。
+keywords: 个人博客, Web开发, Java, JavaScript, 后端开发
 author: 盲侠花满楼
 language: zh-CN
-timezone: 'Asia/Shanghai'
-email: bianyun1981@gmail.com
+timezone: Asia/Shanghai
+email: wisecoder@126.com
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://wisecoder.blog
+url: https://wisecoder.blog
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -32,6 +32,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - README.md
 
 # Writing
 new_post_name: :year-:month/:year-:month-:day-:title.md # File name of new posts
@@ -93,7 +94,7 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include: CNAME
+include:
 exclude:
 ignore:
 
